@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facultad</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>API Facultad</h1>
+      <h1>API Facultad</h1>
     </header>
     <main>
+      <section>
         <h2>Consultas a los datos de la Facultad X</h2>
         <dl>
+            
+          <div>
             <dt>
-                <a href="/alumnos">/alumnos</a>
+              <a href="/alumnos">/alumnos</a>
+            </dt>
+            <dd>Datos completos de todos los alumnos</dd>
+          </div>
+          <div>
+            <dt>
+              <form id="formLetra">
+                <label>/alumnos/<input type="text" id="letras-nombre" /></label>
+              </form>
             </dt>
             <dd>
-                Datos completos de todos los alumnos
+              Búsqueda de alumnos por letras iniciales del primer apellido
             </dd>
-            <dt>
-                <form id="formLetra" method="POST">
-                    <label >Letras a buscar: <input type="text" name="iniciales"></label>
-                </form>
-            </dt>
-            <dd>
-                Búsqueda de alumnos por letras iniciales del primer apellido
-            </dd>
+          </div>
+
         </dl>
+      </section>
     </main>
     <script src="js/facultad.js"></script>
-</body>
+  </body>
 </html>
